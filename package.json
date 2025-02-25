@@ -12,15 +12,12 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "@flowerforce/flower-core": "file:../flower/packages/flower-core/dist",
-    "@flowerforce/flower-react": "file:../flower/packages/flower-react/dist",
-    "@flowerforce/flower-react-context": "file:../flower/packages/flower-react-context/dist",
-    "@flowerforce/flower-react-form": "file:../flower/packages/flower-react-form/dist",
-    "@flowerforce/flower-react-shared": "file:../flower/packages/flower-react-shared/dist",
-    "@flowerforce/flower-react-store": "file:../flower/packages/flower-react-store/dist",
+    "@flowerforce/flower-react": "3.5.0",
+    "@flowerforce/flower-core": "3.3.0",
     "antd": "^5.24.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",

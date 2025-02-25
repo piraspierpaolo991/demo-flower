@@ -1,7 +1,7 @@
-import { useFlower } from "@flowerforce/flower-react";
-import { useFlowerForm } from "@flowerforce/flower-react-form";
-import { Flex, Card, Typography, Spin } from "antd";
+import { useFlower, useFlowerForm } from "@flowerforce/flower-react";
+import { Flex, Typography, Spin } from "antd";
 import { useEffect } from "react";
+import { Card } from "../../../components/Card";
 
 export const Node_3 = () => {
   const { next } = useFlower();
@@ -9,7 +9,7 @@ export const Node_3 = () => {
   useEffect(() => {
     const random = Math.random();
 
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
       .then((data) => {
         if (random > 0.3) throw new Error("Api call error");

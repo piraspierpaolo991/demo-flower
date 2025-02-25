@@ -1,5 +1,6 @@
-import { Flex, Card, Typography } from "antd";
+import { Flex, Typography } from "antd";
 import { ButtonNext } from "../../FlowerComponents/NavigationButtons";
+import { Card } from "../../../components/Card";
 
 export const Node_1 = () => {
   return (

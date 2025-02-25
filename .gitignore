@@ -46,3 +46,4 @@ out/
 # React & Vue Specific
 *.eslintcache
 public/
+packages-installed.md

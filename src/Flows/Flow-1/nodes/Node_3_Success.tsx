@@ -1,45 +1,27 @@
-import { useFlower } from "@flowerforce/flower-react";
-import { Flex, Card, Typography } from "antd";
-import { useEffect, useRef } from "react";
+import { Flex, Typography, Divider } from "antd";
 import {
   ButtonNext,
   ButtonPrev,
 } from "../../FlowerComponents/NavigationButtons";
-import { FlowerValue } from "@flowerforce/flower-react-shared";
+
+import { ListItem } from "../../../components/ListItem";
+import { Card } from "../../../components/Card";
+import { FlowerValue } from "@flowerforce/flower-react";
 
 export const Node_3_Success = () => {
-  const { next } = useFlower();
-  const data = useRef<object | undefined>(undefined);
-  useEffect(() => {
-    const random = Math.random();
-    try {
-      fetch("https://jsonplaceholder.typicode.com/posts")
-        .then((res) => (data.current = res.json()))
-        .then(() => {
-          if (random < 0.7) {
-            throw new Error("Api call error");
-          }
-          next("onSuccess");
-        });
-    } catch (e: unknown) {
-      console.log(e);
-      next("onError");
-    }
-  }, [next]);
   return (
     <Flex vertical gap="middle">
-      <Card title="Action">
-        <Flex vertical gap="small" align="center">
+      <Card title="Action Result Api" variant="outlined">
+        <Flex vertical gap="middle" align="center">
           <Typography.Text>Great! Lets look at datas</Typography.Text>
           <FlowerValue id="apiCall">
-            {({ value }) =>
-              value.map((val: unknown) => (
-                <pre>{JSON.stringify(val, null, 4)}</pre>
-              ))
-            }
+            {({ value }) => value.map(ListItem)}
           </FlowerValue>
-          <ButtonNext />
+        </Flex>
+        <Divider />
+        <Flex gap="middle" justify="center">
           <ButtonPrev />
+          <ButtonNext />
         </Flex>
       </Card>
     </Flex>

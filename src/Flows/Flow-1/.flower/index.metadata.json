@@ -11,39 +11,117 @@
     "node-1": {
       "id": "node-1",
       "position": {
-        "x": -40.694834625150975,
-        "y": -253.20638576929227
+        "x": -483.5070029190576,
+        "y": -398.6169700440494
       },
       "animated": false,
-      "_metadata": {},
+      "_metadata": {
+        "color": "#404040"
+      },
       "type": "FlowerNode",
       "sourceType": "FlowerNode"
     },
     "node-2": {
       "id": "node-2",
       "position": {
-        "x": -236.79056125122324,
-        "y": -75.089856110674
+        "x": -451.02939913663533,
+        "y": -205.46806364662527
       },
       "animated": false,
-      "_metadata": {},
+      "_metadata": {
+        "color": "#1f6fb3",
+        "icon": "EditIcon"
+      },
       "type": "FlowerNode",
       "sourceType": "FlowerNode"
+    },
+    "success": {
+      "id": "success",
+      "position": {
+        "x": -243.46906719170067,
+        "y": 12.837350563419868
+      },
+      "animated": false,
+      "_metadata": {
+        "color": "#79c418",
+        "icon": "TickCircleIcon"
+      },
+      "type": "FlowerNode",
+      "sourceType": "FlowerNode"
+    },
+    "error": {
+      "id": "error",
+      "position": {
+        "x": -715.7089240524263,
+        "y": 8.226539356924448
+      },
+      "animated": false,
+      "type": "FlowerNode",
+      "sourceType": "FlowerNode",
+      "_metadata": {
+        "color": "#ec442e",
+        "icon": "IssueIcon"
+      }
     },
     "node-3": {
       "id": "node-3",
       "position": {
-        "x": -305.7582365045593,
-        "y": 115.66335884392521
+        "x": -311.24259607584224,
+        "y": 178.73349391367924
       },
       "animated": false,
-      "_metadata": {},
+      "_metadata": {
+        "color": "#fbc833",
+        "icon": "CloudDownloadIcon"
+      },
+      "type": "FlowerAction",
+      "sourceType": "FlowerAction"
+    },
+    "successApi": {
+      "id": "successApi",
+      "position": {
+        "x": -155.75823650455933,
+        "y": 402.24697109084633
+      },
+      "animated": false,
+      "_metadata": {
+        "color": "#79c418",
+        "icon": "EndorsedIcon"
+      },
       "type": "FlowerNode",
       "sourceType": "FlowerNode"
     },
+    "errorApi": {
+      "id": "errorApi",
+      "position": {
+        "x": -588.2437785832282,
+        "y": 407.25991273089073
+      },
+      "animated": false,
+      "type": "FlowerNode",
+      "sourceType": "FlowerNode",
+      "_metadata": {
+        "color": "#ec442e",
+        "icon": "IssueIcon"
+      }
+    },
+    "node-4": {
+      "id": "node-4",
+      "position": {
+        "x": 6.7491565603525885,
+        "y": 716.481664331437
+      },
+      "animated": false,
+      "type": "FlowerNode",
+      "sourceType": "FlowerNode",
+      "_metadata": {
+        "color": "#399AC7",
+        "icon": "ResetIcon"
+      }
+    },
     "reactflow__edge-node-1-node-2": {
       "id": "reactflow__edge-node-1-node-2",
-      "label": "+",
+      "label": "basic next",
       "position": {
         "x": -3.709942743996976,
         "y": 230.0965065022732
@@ -55,11 +133,67 @@
       "labelStyle": {
         "fill": "#97A3AC"
       },
+      "_metadata": {
+        "label": "basic next"
+      }
+    },
+    "reactflow__edge-node-2-success": {
+      "id": "reactflow__edge-node-2-success",
+      "label": "Success Input",
+      "position": {
+        "x": 146.29005725600302,
+        "y": 380.0965065022732
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#47B881"
+      },
+      "labelStyle": {
+        "fill": "#47B881"
+      },
+      "_metadata": {
+        "label": "Success Input",
+        "status": "success"
+      }
+    },
+    "reactflow__edge-node-2-error": {
+      "id": "reactflow__edge-node-2-error",
+      "label": "Error input",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#EC4C47"
+      },
+      "labelStyle": {
+        "fill": "#EC4C47"
+      },
+      "_metadata": {
+        "status": "danger",
+        "label": "Error input"
+      }
+    },
+    "reactflow__edge-success-node-3": {
+      "id": "reactflow__edge-success-node-3",
+      "label": "+",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#97A3AC"
+      },
+      "labelStyle": {
+        "fill": "#97A3AC"
+      },
       "_metadata": {}
     },
-    "reactflow__edge-node-2-node-3": {
-      "id": "reactflow__edge-node-2-node-3",
-      "label": "al nodo finale se nome === andrea",
+    "reactflow__edge-node-3-successApi": {
+      "id": "reactflow__edge-node-3-successApi",
+      "label": "Api success",
       "position": {
         "x": null,
         "y": null
@@ -72,8 +206,45 @@
         "fill": "#47B881"
       },
       "_metadata": {
-        "label": "al nodo finale se nome === andrea",
+        "label": "Api success",
         "status": "success"
+      }
+    },
+    "reactflow__edge-node-3-errorApi": {
+      "id": "reactflow__edge-node-3-errorApi",
+      "label": "Api Error",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#EC4C47"
+      },
+      "labelStyle": {
+        "fill": "#EC4C47"
+      },
+      "_metadata": {
+        "status": "danger",
+        "label": "Api Error"
+      }
+    },
+    "reactflow__edge-successApi-node-4": {
+      "id": "reactflow__edge-successApi-node-4",
+      "label": "to final node",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#97A3AC"
+      },
+      "labelStyle": {
+        "fill": "#97A3AC"
+      },
+      "_metadata": {
+        "label": "to final node"
       }
     }
   }

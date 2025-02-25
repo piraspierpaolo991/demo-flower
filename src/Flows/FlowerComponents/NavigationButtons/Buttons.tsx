@@ -1,6 +1,6 @@
 import { Button } from "antd";
 import { useCallback } from "react";
-import { useFlower } from "@flowerforce/flower-react";
+import { useFlower, useFlowerForm } from "@flowerforce/flower-react";
 
 export const ButtonNext = ({
   label = "Next",
@@ -59,6 +59,10 @@ export const ButtonReset = ({
   payload?: Parameters<ReturnType<typeof useFlower>["reset"]>[0];
 }) => {
   const { reset } = useFlower();
-  const onClick = useCallback(() => reset(payload), [payload, reset]);
+  const { reset: resetData } = useFlowerForm();
+  const onClick = useCallback(() => {
+    reset(payload);
+    resetData();
+  }, [payload, reset, resetData]);
   return <Button onClick={onClick}>{label}</Button>;
 };

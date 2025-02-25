@@ -1,9 +1,11 @@
-import { Flex, Card, Typography, Divider, Input } from "antd";
+import { Flex, Typography, Divider, Input } from "antd";
 import {
   ButtonNext,
   ButtonPrev,
 } from "../../FlowerComponents/NavigationButtons";
-import { FlowerField } from "@flowerforce/flower-react-form";
+
+import { Card } from "../../../components/Card";
+import { FlowerField } from "@flowerforce/flower-react";
 
 export const Node_2 = () => {
   return (
