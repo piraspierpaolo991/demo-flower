@@ -1,5 +1,5 @@
 import { Flex, Typography } from "antd";
-import { ButtonPrev } from "../../FlowerComponents/NavigationButtons";
+import { ButtonPrev } from "../../../FlowerComponents/NavigationButtons";
 import { Card } from "../../../components/Card";
 
 export const Node_2_Error = () => {

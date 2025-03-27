@@ -1,6 +1,7 @@
 import { Button } from "antd";
 import { useCallback } from "react";
-import { useFlower, useFlowerForm } from "@flowerforce/flower-react";
+import { useFlower } from "@flowerforce/flower-react";
+import { useFlowerForm } from "@flowerforce/flower-react-form";
 
 export const ButtonNext = ({
   label = "Next",
@@ -10,8 +11,19 @@ export const ButtonNext = ({
   payload?: Parameters<ReturnType<typeof useFlower>["next"]>[0];
 }) => {
   const { next } = useFlower();
-  const onClick = useCallback(() => next(payload), [payload, next]);
-  return <Button onClick={onClick}>{label}</Button>;
+  const { setFormSubmitted, isValid } = useFlowerForm();
+
+  const onClick = useCallback(() => {
+    setFormSubmitted();
+    if (isValid) {
+      next(payload);
+    }
+  }, [setFormSubmitted, isValid, next, payload]);
+  return (
+    <Button disabled={!isValid} onClick={onClick}>
+      {label}
+    </Button>
+  );
 };
 
 export const ButtonPrev = ({

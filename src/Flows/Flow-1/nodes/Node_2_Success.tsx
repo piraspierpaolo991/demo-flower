@@ -1,5 +1,5 @@
 import { Flex, Typography, Divider } from "antd";
-import { ButtonNext } from "../../FlowerComponents/NavigationButtons";
+import { ButtonNext } from "../../../FlowerComponents/NavigationButtons";
 import { Card } from "../../../components/Card";
 
 export const Node_2_Success = () => {

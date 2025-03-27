@@ -2,12 +2,16 @@ import { Flex, Typography, Divider, Input } from "antd";
 import {
   ButtonNext,
   ButtonPrev,
-} from "../../FlowerComponents/NavigationButtons";
+} from "../../../FlowerComponents/NavigationButtons";
 
 import { Card } from "../../../components/Card";
-import { FlowerField } from "@flowerforce/flower-react";
+import { FlowerField } from "@flowerforce/flower-react-form";
+import { useDispatch } from "react-redux";
+import { storeActions } from "../../../feature/store";
+// import { FlowerField } from "@flowerforce/flower-react";
 
 export const Node_2 = () => {
+  const dispatch = useDispatch();
   return (
     <Flex vertical gap="middle">
       <Card title="Flowcharts">
@@ -24,21 +28,40 @@ export const Node_2 = () => {
             the name is "john" we go to the success node
           </Typography.Text>
           <Divider />
-          <FlowerField id="name">
-            {({ onChange, value, id }) => (
+          <FlowerField
+            id="name"
+            validate={[{ rules: { $and: [{ name: { $eq: "john" } }] } }]}
+          >
+            {({
+              onChange,
+              value,
+              id,
+              errors,
+              hasError,
+              touched,
+              isSubmitted,
+              onBlur,
+            }) => (
               <Flex vertical gap="small">
                 <Typography.Text>{id}</Typography.Text>
                 <Input
                   type="text"
                   value={value}
                   onChange={(e) => onChange(e.target.value)}
+                  onBlur={onBlur}
                 />
+                {hasError && errors && (touched || isSubmitted) && (
+                  <Typography.Text>{errors.toString()}</Typography.Text>
+                )}
               </Flex>
             )}
           </FlowerField>
           <Flex gap="small">
             <ButtonPrev />
             <ButtonNext />
+            <button onClick={() => dispatch(storeActions.add())}>
+              asdasdas
+            </button>
           </Flex>
         </Flex>
       </Card>

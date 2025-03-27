@@ -1,5 +1,5 @@
 import { Flex, Typography } from "antd";
-import { ButtonReset } from "../../FlowerComponents/NavigationButtons";
+import { ButtonReset } from "../../../FlowerComponents/NavigationButtons";
 import { Card } from "../../../components/Card";
 
 export const Node_4 = () => {
