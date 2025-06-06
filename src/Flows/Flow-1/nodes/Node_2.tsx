@@ -6,12 +6,9 @@ import {
 
 import { Card } from "../../../components/Card";
 import { FlowerField } from "@flowerforce/flower-react-form";
-import { useDispatch } from "react-redux";
-import { storeActions } from "../../../feature/store";
 // import { FlowerField } from "@flowerforce/flower-react";
 
 export const Node_2 = () => {
-  const dispatch = useDispatch();
   return (
     <Flex vertical gap="middle">
       <Card title="Flowcharts">
@@ -59,9 +56,6 @@ export const Node_2 = () => {
           <Flex gap="small">
             <ButtonPrev />
             <ButtonNext />
-            <button onClick={() => dispatch(storeActions.add())}>
-              asdasdas
-            </button>
           </Flex>
         </Flex>
       </Card>

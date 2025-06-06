@@ -1,4 +1,9 @@
-import { Flower, FlowerAction, FlowerNode } from "@flowerforce/flower-react";
+import {
+  Flower,
+  FlowerAction,
+  FlowerFlow,
+  FlowerNode,
+} from "@flowerforce/flower-react";
 import { Node_1 } from "./nodes/Node_1";
 import { Node_2 } from "./nodes/Node_2";
 import { Node_2_Success } from "./nodes/Node_2_Success";
@@ -17,11 +22,38 @@ export const Flow_1 = () => {
        */}
       <FlowerNode
         id="node-1"
-        to={{ "node-2": { label: "basic next", rules: null } }}
+        to={{ "node-2": { label: "basic next", rules: () => true } }}
       >
         <Node_1 />
       </FlowerNode>
 
+      {/**
+       * NODO INPUT
+       * In questo nodo inseriamo un campo di input testuale, in base al valore del campo di input, scegliamo se andare nel nodo success o in quello error
+       */}
+      <FlowerNode
+        id="node-2"
+        to={{
+          success: {
+            label: "Success Input",
+            rules: { $and: [{ name: { $eq: "john" } }] },
+          },
+          error: { label: "Error input", rules: null },
+        }}
+      >
+        <Node_2 />
+      </FlowerNode>
+
+      <FlowerFlow id="node-2">
+        <Flow_2 />
+      </FlowerFlow>
+    </Flower>
+  );
+};
+
+export const Flow_2 = () => {
+  return (
+    <Flower name="Flow-2">
       {/**
        * NODO INPUT
        * In questo nodo inseriamo un campo di input testuale, in base al valore del campo di input, scegliamo se andare nel nodo success o in quello error

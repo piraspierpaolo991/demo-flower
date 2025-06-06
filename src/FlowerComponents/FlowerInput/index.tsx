@@ -12,3 +12,13 @@ const WrappedInput = ({ ...props }: FlowerInputProps) => {
 };
 
 export const FlowerInput = withFlowerField(WrappedInput);
+
+// export const FlowerInput = ({ id, ...restProps }: FlowerInputProps) => {
+//   return (
+//     <FlowerField id={id}>
+//       {({ value, onChange }) => (
+//         <Input {...restProps} value={value} onChange={onChange} />
+//       )}
+//     </FlowerField>
+//   );
+// };

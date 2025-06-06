@@ -71,7 +71,7 @@ export const ButtonReset = ({
   payload?: Parameters<ReturnType<typeof useFlower>["reset"]>[0];
 }) => {
   const { reset } = useFlower();
-  const { reset: resetData } = useFlowerForm();
+  const { reset: resetData } = useFlowerForm("app");
   const onClick = useCallback(() => {
     reset(payload);
     resetData();

@@ -16,23 +16,15 @@ export const withFlowerValue = <T extends object>(
 
     return (
       <FlowerValue id={id}>
-        {({ value, onChange, hasError, errors, touched, onBlur, onFocus }) => (
-          <Flex vertical>
-            <Typography.Title>{id}</Typography.Title>
-            <WrappedComponent
-              value={value}
-              onChange={onChange}
-              onBlur={onBlur}
-              onFocus={onFocus}
-              {...(restProps as T)}
-            />
-            {hasError && errors && touched && (
-              <Typography.Text style={{ color: "red" }}>
-                {errors[0]}
-              </Typography.Text>
-            )}
-          </Flex>
-        )}
+        {({ value, hidden, id }) => {
+          if (hidden) return null;
+          return (
+            <Flex vertical>
+              <Typography.Title>{id}</Typography.Title>
+              <WrappedComponent value={value} {...(restProps as T)} />
+            </Flex>
+          );
+        }}
       </FlowerValue>
     );
   };

@@ -1,33 +1,29 @@
-import App from "./App.tsx";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { ThemeProvider } from "@emotion/react";
 import { theme } from "./style/theme.ts";
-import { Provider } from "react-redux";
+import { Devtool } from "@flowerforce/flower-devtool";
+import {
+  FlowerProvider,
+  HistoryContextProvider,
+} from "@flowerforce/flower-react";
+import App from "./App.tsx";
 
-import { storeWithFlower } from "./feature/store.ts";
+Devtool({
+  port: 8771,
+  host: "localhost",
+  // sourceMap,
+  sessionId: "Lasjgdaifu93jrn3893rb",
+});
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
-      <Provider store={storeWithFlower}>
-        <App />
-      </Provider>
+      <HistoryContextProvider>
+        <FlowerProvider enableReduxDevtool>
+          <App />
+        </FlowerProvider>
+      </HistoryContextProvider>
     </ThemeProvider>
   </StrictMode>,
 );
-
-// import { FlowerProvider } from "@flowerforce/flower-react";
-// import { store } from "./feature/store.ts";
-
-// createRoot(document.getElementById("root")!).render(
-//   <StrictMode>
-//     <ThemeProvider theme={theme}>
-//       <FlowerProvider>
-//         <Provider store={store}>
-//           <App />
-//         </Provider>
-//       </FlowerProvider>
-//     </ThemeProvider>
-//   </StrictMode>,
-// );

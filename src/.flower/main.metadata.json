@@ -1,0 +1,111 @@
+{
+  "//": "Do not publish this file",
+  "type": "flow",
+  "name": "flow",
+  "apps": [
+    "step-1",
+    "step-2",
+    "flow-2",
+    "nodo-a"
+  ],
+  "elements": {
+    "step-1": {
+      "id": "step-1",
+      "position": {
+        "x": -697.7987248829355,
+        "y": -728.0646936730387
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerNode",
+      "sourceType": "FlowerNode"
+    },
+    "step-2": {
+      "id": "step-2",
+      "position": {
+        "x": -546.4688809324193,
+        "y": -292.57103163766453
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerNode",
+      "sourceType": "FlowerNode"
+    },
+    "flow-2": {
+      "id": "flow-2",
+      "position": {
+        "x": -455.15565171603623,
+        "y": -131.69725561588598
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerFlow",
+      "sourceType": "FlowerFlow"
+    },
+    "nodo-a": {
+      "id": "nodo-a",
+      "position": {
+        "x": -591.6741334066846,
+        "y": -518.7109987941382
+      },
+      "animated": false,
+      "_metadata": {
+        "name": "FlowerNode",
+        "widgets": []
+      },
+      "type": "FlowerNode",
+      "sourceType": "FlowerNode"
+    },
+    "reactflow__edge-step-1-nodo-a": {
+      "id": "reactflow__edge-step-1-nodo-a",
+      "label": "+",
+      "position": {
+        "x": -441.67413340668463,
+        "y": -368.71099879413816
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#97A3AC"
+      },
+      "labelStyle": {
+        "fill": "#97A3AC"
+      },
+      "_metadata": {
+        "name": "FlowerNode",
+        "widgets": []
+      }
+    },
+    "reactflow__edge-step-2-flow-2": {
+      "id": "reactflow__edge-step-2-flow-2",
+      "label": "+",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#97A3AC"
+      },
+      "labelStyle": {
+        "fill": "#97A3AC"
+      },
+      "_metadata": {}
+    },
+    "reactflow__edge-nodo-a-step-2": {
+      "id": "reactflow__edge-nodo-a-step-2",
+      "label": "+",
+      "position": {
+        "x": 150,
+        "y": 150
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#97A3AC"
+      },
+      "labelStyle": {
+        "fill": "#97A3AC"
+      },
+      "_metadata": {}
+    }
+  }
+}

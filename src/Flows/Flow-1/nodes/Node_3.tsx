@@ -18,7 +18,7 @@ export const Node_3 = () => {
         next("onSuccess");
       })
       .catch(() => next("onError"));
-  }, [next, setData]);
+  }, []);
   return (
     <Flex vertical gap="middle">
       <Card title="Action">

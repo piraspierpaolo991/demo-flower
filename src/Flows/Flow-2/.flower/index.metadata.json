@@ -1,0 +1,51 @@
+{
+  "//": "Do not publish this file",
+  "type": "flow",
+  "name": "Demo-flow",
+  "apps": [
+    "start",
+    "node-2"
+  ],
+  "elements": {
+    "start": {
+      "id": "start",
+      "position": {
+        "x": -98.1827065806484,
+        "y": -160.52093298106007
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerNode",
+      "sourceType": "FlowerNode"
+    },
+    "node-2": {
+      "id": "node-2",
+      "position": {
+        "x": 85.57205978260225,
+        "y": 207.52424252616055
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerNode",
+      "sourceType": "FlowerNode"
+    },
+    "reactflow__edge-start-node-2": {
+      "id": "reactflow__edge-start-node-2",
+      "label": "basic next",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#97A3AC"
+      },
+      "labelStyle": {
+        "fill": "#97A3AC"
+      },
+      "_metadata": {
+        "label": "basic next"
+      }
+    }
+  }
+}

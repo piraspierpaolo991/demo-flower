@@ -1,11 +1,11 @@
 import { Flex, Typography } from "antd";
 import { ButtonNext } from "../../../FlowerComponents/NavigationButtons";
 import { Card } from "../../../components/Card";
-import { useStore } from "react-redux";
+// import { useStore } from "react-redux";
 
 export const Node_1 = () => {
-  const store = useStore();
-  console.log(store.getState());
+  // const store = useStore();
+  // console.log(store.getState());
   return (
     <Flex vertical gap="middle">
       <Card title="Welcome">

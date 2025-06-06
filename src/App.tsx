@@ -1,8 +1,5 @@
-// import { Flow_1 } from "./Flows/Flow-1";
-import { Flow_2 } from "./Flows/Flow-2";
+import { Flow_1 } from "./Flows/Flow-1";
 
-function App() {
-  return <Flow_2 />;
-}
+export const App = () => <Flow_1 />;
 
 export default App;

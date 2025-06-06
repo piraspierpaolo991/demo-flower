@@ -1,5 +1,8 @@
 import { Flex, Typography, Divider } from "antd";
-import { ButtonNext } from "../../../FlowerComponents/NavigationButtons";
+import {
+  ButtonNext,
+  ButtonPrev,
+} from "../../../FlowerComponents/NavigationButtons";
 import { Card } from "../../../components/Card";
 
 export const Node_2_Success = () => {
@@ -25,6 +28,7 @@ export const Node_2_Success = () => {
             try
           </Typography.Text>
           <ButtonNext />
+          <ButtonPrev />
         </Flex>
       </Card>
     </Flex>

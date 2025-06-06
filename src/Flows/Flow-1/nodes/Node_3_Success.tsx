@@ -7,7 +7,6 @@ import {
 import { ListItem } from "../../../components/ListItem";
 import { Card } from "../../../components/Card";
 import { FlowerValue } from "@flowerforce/flower-react-shared";
-// import { FlowerValue } from "@flowerforce/flower-react";
 
 export const Node_3_Success = () => {
   return (

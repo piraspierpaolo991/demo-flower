@@ -1,4 +1,3 @@
-import { useStore } from "react-redux";
 import { Flex, Typography } from "antd";
 import { FlowerInput } from "../../../FlowerComponents/FlowerInput";
 import { FlowerSelect } from "../../../FlowerComponents/FlowerSelect";
@@ -21,8 +20,6 @@ const GENDER_OPTIONS = [
 ];
 
 export const StartNode = () => {
-  const store = useStore();
-  console.log(store.getState());
   return (
     <Flex vertical gap="middle">
       <Card title="Welcome">
